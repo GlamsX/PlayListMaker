@@ -1,0 +1,17 @@
+<nz-layout>
+    <nz-header class="layout-header">
+        <nz-page-header title="Service"></nz-page-header>
+    </nz-header>
+    <nz-content class="layout-content">
+        <nz-card>
+            <ul nz-list [nzDataSource]="services">
+                <li nz-list-item *ngFor="let service of services">
+                    <nz-list-item>{{service.name}}</nz-list-item>
+                    <nz-list-item>
+                        <a nz-button nzType="text" [nzDanger]="service.status">{{service.status ? 'Désactiver' : 'Activer'}}</a>
+                    </nz-list-item>
+                </li>
+            </ul>
+        </nz-card>
+    </nz-content>
+</nz-layout>

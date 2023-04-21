@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+nz-layout {
+    height: 100%;
+}
+
+.layout-header {
+    height: auto;
+    background: #9bc5c0;
+}
+
+.layout-content {
+    position: relative;
+    overflow: auto;
+}
+
+.inner-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+}
+
+nz-content {
+    padding: 24px;
+    min-height: 240px;
+}
+
+.ant-layout-header > .ant-page-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.is-fullwidth {
+    width: 100%;
+}
+  
+.is-fullheight {
+    height: 100%;
+}
+  
+.is-fullscreen {
+    width: 100%;
+    height: 100%;
+}

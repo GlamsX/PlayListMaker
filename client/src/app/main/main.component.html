@@ -1,0 +1,38 @@
+<nz-layout>
+    <nz-header class="layout-header">
+        <div class="is-flex is-align-items-center is-fullheight">
+            
+            <div class="logo">
+                <button nz-button nzType="text">Playlist Maker</button>
+            </div>
+
+            <span class="spacer"></span>
+
+            <ng-container *ngIf="loggin$ | async; else notLogin">
+                <nz-avatar nzText="USER" nz-dropdown [nzDropdownMenu]="menu" nzPlacement="bottomRight" (click)="print_data()"></nz-avatar>
+                <nz-dropdown-menu #menu="nzDropdownMenu">
+                    <ul nz-menu>
+                        <li nz-menu-item>
+                            <span>Profile</span>
+                        </li>
+                        <li nz-menu-item>
+                            <a [routerLink]="['private/settings/profile']">Paramètres</a>
+                        </li>
+                        <li nz-menu-item>
+                            <button nz-button nzType="link" nzDanger (click)="logout()">
+                                Logout
+                            </button>
+                        </li>
+                    </ul>
+                </nz-dropdown-menu>
+            </ng-container>
+            <ng-template #notLogin>
+                <button nz-button nzType="primary" nzDanger (click)="loggin()">Login</button>
+            </ng-template>
+
+        </div>
+    </nz-header>
+    <nz-content>
+        <router-outlet></router-outlet>
+    </nz-content>
+</nz-layout>

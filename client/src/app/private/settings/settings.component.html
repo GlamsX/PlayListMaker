@@ -1,0 +1,11 @@
+<nz-layout>
+    <nz-sider nzTheme="light">
+        <ul nz-menu nzMode="vertical">
+            <li nz-menu-item [routerLink]="['profile']">Profile</li>
+            <li nz-menu-item [routerLink]="['services']">Services</li>
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <router-outlet></router-outlet>
+    </nz-layout>
+</nz-layout>
