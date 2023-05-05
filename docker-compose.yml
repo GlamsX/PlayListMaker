@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  back:
+    image: node:latest
+    container_name: back
+    command: "sh -c 'cd /app-back && npm i && npm run start:prod'"
+    ports:
+      - "3030:3030"
+    volumes:
+      - ./back/dist:/app-back/dist
+      - ./back/package.json:/app-back/package.json

@@ -54,7 +54,7 @@ export default function Home() {
               {/* Bouclez sur la liste des titres et affichez chaque titre ici */}
               <li className="border-b  flex border-gray-200 py-2">
                 <p className="font-semibold m-2">Titre de la chanson</p>
-                <p className="text-gray-600 m-2">Nom de l'auteur</p>
+                <p className="text-gray-600 m-2">auteur de la chanson</p>
               </li>
             </ul>
           </div>
